@@ -1,0 +1,1 @@
+ responsibility(e.g user service for authentication and product service for product data)nd flexibitlity
