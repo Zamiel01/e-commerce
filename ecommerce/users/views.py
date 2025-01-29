@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from rest_framework import viewsets
-from .models import User  # Assuming you have a User model
+from .models import CustomUser  # Importing the CustomUser model
 from .serializers import UserSerializer  # Assuming you have a UserSerializer
 
 def register(request):
@@ -23,5 +23,5 @@ def login_view(request):
     return render(request, 'users/login.html')
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
